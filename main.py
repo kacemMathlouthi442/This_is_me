@@ -10,7 +10,7 @@ from KeysDB import *
 from Others import *
 from Functions import *
 from keepalive import keep_alive
-from asyncio import sleep
+from time import sleep
 from random import randint
 from aiogram.fsm.state import State, StatesGroup
 from aiogram.fsm.context import FSMContext
@@ -260,11 +260,11 @@ To initiate a spoofing call\, please provide all 5 required arguments\:
     🔢 *OTP DIGITS*\: `"""+otp_digit+'`',parse_mode='MarkdownV2')
             sleep(1)
             await message.answer("✅ *CALL STARTED*\.\.\.",parse_mode='MarkdownV2')
-            await sleep(randint(2,4))
+            sleep(randint(2,4))
             await message.answer("📞 *CALL RINGING*",reply_markup=ringing,parse_mode='MarkdownV2')
-            await sleep(randint(4,6))
+            sleep(randint(4,6))
             await message.answer("❌ *CALL CANCLED*",parse_mode='MarkdownV2')
-            await sleep(0.2)
+            sleep(0.2)
             if get_user_info(user_id,'In_Call')==True:
                 ran_num = get_user_info(user_id,'Err_Num')
                 error = InlineKeyboardMarkup(inline_keyboard=[[InlineKeyboardButton(text="🛠 Support Team", url=admin_link),InlineKeyboardButton(text="ℹ️ More Info", url=errors_links[ran_num])]])
@@ -328,11 +328,11 @@ To initiate a spoofing call\, please provide all 3 required arguments\:
     🔢 *OTP DIGITS*\: `"""+otp_digit+'`',parse_mode='MarkdownV2')
             sleep(1)
             await message.answer("✅ *CALL STARTED*\.\.\.",parse_mode='MarkdownV2')
-            await sleep(randint(2,4))
+            sleep(randint(2,4))
             await message.answer("📞 *CALL RINGING*",reply_markup=ringing,parse_mode='MarkdownV2')
-            await sleep(randint(4,6))
+            sleep(randint(4,6))
             await message.answer("❌ *CALL CANCLED*",parse_mode='MarkdownV2')
-            await sleep(0.2)
+            sleep(0.2)
             if get_user_info(user_id,'In_Call')==True:
                 ran_num = get_user_info(user_id,'Err_Num')
                 error1 = InlineKeyboardMarkup(inline_keyboard=[[InlineKeyboardButton(text="🛠 Support Team", url=admin_link),InlineKeyboardButton(text="ℹ️ More Info", url=errors_links[ran_num])]])
