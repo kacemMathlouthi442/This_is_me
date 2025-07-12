@@ -98,7 +98,7 @@ async def choose_keys_type(update: Update, context: ContextTypes.DEFAULT_TYPE): 
                 keys = show_valid_keys(key_type)
                 await query.edit_message_text(
                     fr"""✅ *Available {duration(key_type)} Keys*\: 
-                    """ + """\n""".join(keys),
+""" + """\n""".join(keys),
                     parse_mode='MarkdownV2')
             else:
                 reset_key(key_type)
