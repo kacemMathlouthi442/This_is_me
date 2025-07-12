@@ -1,0 +1,6 @@
+python-telegram-bot==20.8
+psycopg[binary]
+python-dotenv
+flask
+requests
+phonenumbers
