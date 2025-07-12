@@ -1,4 +1,4 @@
-python-telegram-bot
+aiogram
 psycopg[binary]
 python-dotenv
 flask
